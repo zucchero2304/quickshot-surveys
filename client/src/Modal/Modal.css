@@ -13,7 +13,8 @@
     max-width: 480px;
     width: 70%;
     margin-inline: auto;
-    margin-top: 12%;
+    top: 50%;
+    transform: translateY(-50%);
     background: var(--darkWhite);
     box-shadow: 4px 4px 0px black;
     font-size: 18px;
