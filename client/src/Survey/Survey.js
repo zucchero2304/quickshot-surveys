@@ -162,7 +162,6 @@ export default function Survey() {
                     </div>
                 )}
             </div>
-            <button onClick={() => console.log(answers)}>ss</button>
 
             {survey !== null ?
                 <div>

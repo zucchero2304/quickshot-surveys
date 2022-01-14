@@ -9,7 +9,6 @@
     "axios": "^0.24.0",
     "chart.js": "^3.6.2",
     "cloudinary-react": "^1.7.0",
-    "history": "^5.1.0",
     "qrcode.react": "^1.0.1",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.0",
