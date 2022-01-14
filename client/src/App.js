@@ -138,7 +138,7 @@ function App() {
 
   const captchaOnChange = (response) => {
     axios
-      .post("http://localhost:5000/verify-captcha", [response])
+      .post("http://" + window.location.host + "/verify-captcha", [response])
       .then((res) => {
         setCaptchaValid(res.data)
       })
