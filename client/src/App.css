@@ -140,7 +140,7 @@ a {
 
 .disabled-button {
   cursor: default;
-  opacity: 55%;
+  opacity: 0.5;
 }
 
 .copy-link-btn {
