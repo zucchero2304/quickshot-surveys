@@ -1,0 +1,17 @@
+.collapse-btn {
+    background-color: #505050;
+    width: 150px;
+    height: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.active {
+    filter: brightness(130%);
+}
+
+.collapse-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}

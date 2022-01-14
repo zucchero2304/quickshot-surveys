@@ -1,0 +1,16 @@
+.photo-question-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.photo-grid-element .photo {
+    width: 150px;
+    height: 150px;
+}
+
+.photo-grid-element p {
+    margin: 0 0 5px 0;
+}

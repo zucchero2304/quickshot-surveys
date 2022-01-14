@@ -1,0 +1,28 @@
+.answer-input {
+    width: 80%;
+    margin: 5px;
+    box-shadow: 4px 4px 0px var(--dark);
+    border-radius: 0;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.add-delete-buttons>span {
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    color: var(--dark);
+    cursor: pointer;
+    font-size: 3rem;
+    margin: 5px;
+    height: 30px;
+}
+
+.add-delete-buttons>span:hover {
+    transform: scale(1.1);
+}
+
+.add-question-btn {
+    margin-top: 20px;
+}

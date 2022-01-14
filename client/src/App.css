@@ -1,0 +1,165 @@
+html {
+  /* backgrounds */
+  --white: #FAF9F6;
+  --blue: #A7C7E7;
+  --green: #4F7942;
+  --red: #D2042D;
+
+  /* fonts */
+  --light: #FAF9F6;
+  --dark: #28282B;
+  --darkWhite: #F9F6EE;
+
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--white);
+  margin: 0;
+  padding: 0 0 20px 0;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+
+button {
+  background-color: var(--green);
+  padding: 9px;
+  color: var(--light);
+  border-radius: 0;
+  border: none;
+  margin-inline: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--dark);
+}
+
+button:hover {
+  filter: brightness(130%);
+}
+
+span {
+  color: var(--dark);
+}
+
+h1, h2, h3, h4 {
+  margin: 10px;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+a {
+  display: block;
+  font-size: 1rem;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.top-part {
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  padding-block: 20px;
+  background-color: var(--blue);
+}
+
+.top-buttons {
+  position: relative;
+  top: 45px;
+  margin-top: -30px;
+}
+
+.main-btn {
+  width: 150px;
+  height: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.reset-btn {
+  background-color: var(--red);
+}
+
+.question-container {
+  background-color: var(--darkWhite);
+  border: 2px solid var(--dark);
+  padding: 1%;
+  box-shadow: 4px 4px 0px var(--dark);
+  margin-block: 15px;
+  margin-inline: 15%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .question-container {
+    margin-inline: 10%;
+  }
+}
+
+.survey-title-box {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#description-input, #title, .survey-link, #survey-code {
+  width: 50%;
+  margin: 5px;
+  box-shadow: 4px 4px 0px var(--dark);
+  border-radius: 0;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#description-input {
+  max-width: 50%;
+  resize: none;
+}
+
+.disabled-button {
+  opacity: 50%;
+  cursor: default;
+}
+
+.copy-link-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results-link {
+  width:fit-content;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.captcha {
+  width:fit-content;
+  margin: 15px auto 15px auto;
+}
+
+.load-btn {
+  background-color: steelblue;
+}

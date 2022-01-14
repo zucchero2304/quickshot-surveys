@@ -1,0 +1,69 @@
+.photo-checkbox {
+    display: none;
+}
+
+.photo, .photo-label {
+    height: 200px;
+    width: 200px;
+}
+
+.photo-label {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-checkbox:checked+label>img {
+    border: 5px solid var(--green);
+    height: 190px;
+    width: 190px;
+    transition: all .2s ease-in-out;
+}
+
+.photo-checkbox+label>img {
+    transition: all .2s ease-in-out;
+    border: 0px solid var(--green);
+}
+
+.photo-checkbox:checked+label>.overlay {
+    opacity: 1;
+}
+
+.overlay {
+    transition: all .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+}
+
+.overlay>span {
+    color: var(--dark);
+}
+
+.photo-choices-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-question-box {
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.question-container>span {
+    color: var(--dark);
+}

@@ -1,0 +1,12 @@
+.list-container {
+    margin-top: 40px;
+    margin-inline: auto;
+}
+
+.empty-list-message {
+    color: grey;
+    display: inline-block;
+    margin-block: 40px;
+    line-height: 2;
+    font-size: 1.3rem;
+}

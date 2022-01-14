@@ -1,0 +1,11 @@
+.one-checkbox-answer {
+    margin: 6px;
+}
+
+.multiquestion-label {
+    font-size: 1.2rem;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}

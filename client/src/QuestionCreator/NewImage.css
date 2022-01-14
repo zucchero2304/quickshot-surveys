@@ -1,0 +1,12 @@
+@media only screen and (min-width: 800px) {
+    .photo-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+.add-photo {
+    font-size: 3rem;
+}
+
+
