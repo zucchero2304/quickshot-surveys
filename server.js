@@ -11,6 +11,8 @@ app.use(require("./routes/images"))
 app.use(require("./routes/recaptcha"))
 app.use(require("./routes/surveyCodes"))
 
+app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')))
+
 // get driver connection
 const dbo = require("./db/connection")
 
