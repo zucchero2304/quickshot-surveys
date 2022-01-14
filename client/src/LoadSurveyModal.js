@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from "axios";
 import { Link } from "react-router-dom"
+import './App.css'
 
 
 export default function LoadSurveyModal({ setShowLoadSurveyModal }) {

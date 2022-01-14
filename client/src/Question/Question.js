@@ -21,11 +21,11 @@ export default function Question({ question, photoMap }) {
     const answers = question.possibleAnswers.map((ans, index) => {
         switch (question.type) {
             case "choice":
-                return <p key={index}>{alphabet.charAt(index).toUpperCase() + ":" + ans}</p>
+                return <p key={index}>{alphabet.charAt(index).toUpperCase() + ": " + ans}</p>
             case "imageQuestion":
                 return (
                     <div className='image-question-box' key={index}>
-                        <p>{alphabet.charAt(index).toUpperCase() + ":"}</p>
+                        <p>{alphabet.charAt(index).toUpperCase() + ": "}</p>
                         <img className='photo' src={photoMap.get(ans)} height="200" alt="answer thumbnail"/>
                     </div>
                 )

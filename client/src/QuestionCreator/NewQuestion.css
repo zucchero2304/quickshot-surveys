@@ -6,7 +6,7 @@ input[type=radio] {
     display: none;
 }
 
-label > span {
+label>span {
     display: inline-block;
     color: var(--dark);
     margin: 15px;
@@ -14,18 +14,25 @@ label > span {
     transition: all .2s ease-in-out;
 }
 
-input:checked + span {
+input:checked+span {
     font-weight: bold;
     font-size: 1.3rem;
 }
 
 .radio-buttons {
-    height: 80px;
+    height: auto;
 }
 
 .radio-buttons label {
-    display: inline-block;
+    display: block;
     height: auto;
+}
+
+@media only screen and (min-width: 700px) {
+    .radio-buttons label {
+        display: inline-block;
+        height: auto;
+    }
 }
 
 #question {
@@ -38,5 +45,3 @@ input:checked + span {
     font-size: 1rem;
     font-family: 'Josefin Sans', sans-serif;
 }
-
-

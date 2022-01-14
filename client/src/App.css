@@ -163,3 +163,10 @@ a {
 .load-btn {
   background-color: steelblue;
 }
+ #survey-code {
+   width: 60%;
+ }
+
+ #load-survey-btn {
+  margin-right: 20px;
+ }
