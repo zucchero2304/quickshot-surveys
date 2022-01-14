@@ -42,7 +42,7 @@ function App() {
 
   const postSurvey = () => {
     axios
-      .post("http://localhost:5000/survey/add", survey)
+      .post("https://" + window.location.host + "/survey/add", survey)
       .then((res) => {
         console.log("Survey posted! Its id is:" + res.data)
         setSurveyId(res.data)
@@ -57,7 +57,7 @@ function App() {
     () => {
       if (surveyId !== "") {
         axios
-          .post("http://localhost:5000/surveyCodes/add", [surveyId])
+          .post("https://" + window.location.host + "/surveyCodes/add", [surveyId])
           .then((res) => {
             console.log("Survey key generated: " + res.data)
             setSurveyCode(res.data)
@@ -124,7 +124,7 @@ function App() {
   const postImage = (base64Image, imageId) => {
     axios
       .post(
-        "http://localhost:5000/images/add",
+        "https://" + window.location.host + "/images/add",
         [base64Image, imageId]
       )
       .then((res) => {

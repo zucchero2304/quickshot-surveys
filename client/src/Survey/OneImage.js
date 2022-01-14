@@ -7,7 +7,7 @@ export default function OneImage({ surveyId, answer, index, handleCheckboxClick 
     const alphabet = "abcdefghijkl"
 
     axios
-        .get("http://localhost:5000/images/" + surveyId + ":" + answer)
+        .get("https://" + window.location.host + "/images/" + surveyId + ":" + answer)
         .then((res) => {
             setSource(res.data)
         })

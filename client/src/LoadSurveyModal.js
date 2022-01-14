@@ -14,7 +14,7 @@ export default function LoadSurveyModal({ setShowLoadSurveyModal }) {
     const recaptchaRef = useRef(null)
     const captchaOnChange = (response) => {
         axios
-            .post("http://localhost:5000/verify-captcha", [response])
+            .post("https://" + window.location.host + "/verify-captcha", [response])
             .then((res) => {
                 setCaptchaValid(res.data)
             })
@@ -26,7 +26,7 @@ export default function LoadSurveyModal({ setShowLoadSurveyModal }) {
 
     const loadSurvey = (code) => {
         axios
-            .get("http://localhost:5000/surveyCodes/" + code)
+            .get("https://" + window.location.host + "/surveyCodes/" + code)
             .then((res) => {
                 console.log("Code matched, surveyId: " + res.data.surveyId)
                 setSurveyId(res.data.surveyId)

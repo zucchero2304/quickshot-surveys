@@ -27,7 +27,7 @@ export default function Survey() {
     const getSurvey = useCallback(
         () => {
             axios
-                .get("http://localhost:5000/survey/" + id)
+                .get("https://" + window.location.host + "/survey/" + id)
                 .then((res) => {
                     setSurvey(res.data)
                     setShowQuestions(true)
@@ -46,7 +46,7 @@ export default function Survey() {
     const postAnswers = () => {
         axios
             .post(
-                "http://localhost:5000/answers/add",
+                "https://" + window.location.host + "/answers/add",
                 { answerSet: answers, surveyId: id }
             )
             .then((res) => {
@@ -134,7 +134,7 @@ export default function Survey() {
 
     const captchaOnChange = (response) => {
         axios
-            .post("http://localhost:5000/verify-captcha", [response])
+            .post("https://" + window.location.host + "/verify-captcha", [response])
             .then((res) => {
                 setCaptchaValid(res.data)
             })
