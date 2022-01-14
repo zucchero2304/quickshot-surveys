@@ -25,10 +25,10 @@ export default function ShareModalContent({ surveyId }) {
     return (
         <div>
             <h3>Share your survey:</h3>
-            <input className="survey-link" type="text" value={window.location.host + "/survey/" + surveyId} id="survey-link-box" readOnly></input>
+            <input className="survey-link" type="text" value={window.location.host + "/share/" + surveyId} id="survey-link-box" readOnly></input>
             <button className="copy-link-btn" onClick={copyLink}>Copy link</button>
             <br />
-            <QRCode id="qr-code" value={"https://www." + window.location.host + "/survey/" + surveyId} />
+            <QRCode id="qr-code" value={"https://www." + window.location.host + "/share/" + surveyId} />
             <button style={{ backgroundColor: "blue", display: "block", marginInline: "auto" }} onClick={downloadQrCode}>Download QR code</button>
         </div>
     )
