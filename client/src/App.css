@@ -175,8 +175,8 @@ a {
 
 .home-btn {
   position: fixed;
-  left: 0;
-  top: 5%;
+  left: -29px;
+  top: 8%;
   padding: 0;
   width: 80px;
   height: 25px;
