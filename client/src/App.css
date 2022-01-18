@@ -181,9 +181,5 @@ a {
   width: 25px;
   height: 80px;
   margin: 0;
-  writing-mode: vertical-rl;
-  -ms-writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-  -moz-writing-mode: vertical-rl;
-  writing-mode: vertical-rl, vertical lines;
+  writing-mode: tb-rl;
 }
