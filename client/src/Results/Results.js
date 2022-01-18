@@ -6,6 +6,7 @@ import Modal from "../Modal/Modal";
 import ShareModalContent from "../ShareModalContent";
 import CloseQuestionResult from "./CloseQuestionResult";
 import OpenQuestionResult from "./OpenQuestionResult";
+import { Link } from "react-router-dom";
 
 export default function Results() {
 
@@ -38,7 +39,7 @@ export default function Results() {
     const fetchAnswers = useCallback(
         () => {
             axios
-                .get("https://" + window.location.host + "/answers/" + id)
+                .get(window.location.host + "/answers/" + id)
                 .then((res) => {
                     let answerDocuments = res.data
                     makeAnswersArray(answerDocuments)
@@ -59,7 +60,7 @@ export default function Results() {
         if (id !== null) {
             setFetchData(false)
             axios
-                .get("https://" + window.location.host + "/survey/" + id)
+                .get(window.location.host + "/survey/" + id)
                 .then((res) => {
                     setSurvey(res.data)
                 })
@@ -128,7 +129,7 @@ export default function Results() {
     const deleteSurvey = () => {
         //delete survey
         axios
-            .delete('https://' + window.location.host + '/survey/delete/' + id)
+            .delete(window.location.host + '/survey/delete/' + id)
             .then((res) => {
                 console.log(res)
             })
@@ -138,7 +139,7 @@ export default function Results() {
 
         //delete all answers for this survey
         axios
-            .delete('https://' + window.location.host + '/answers/delete/' + id)
+            .delete(window.location.host + '/answers/delete/' + id)
             .then((res) => {
                 console.log(res)
             })
@@ -150,7 +151,7 @@ export default function Results() {
         //won't fire if there weren't any images
         if (imageIds.length >= 2) {
             axios
-                .delete('https://' + window.location.host + '/images/delete/' + id, { data: imageIds })
+                .delete(window.location.host + '/images/delete/' + id, { data: imageIds })
                 .then((res) => {
                     console.log(res)
                 })
@@ -188,6 +189,10 @@ export default function Results() {
     return (
         <div>
             <div className="top-part">
+                <Link className="home-link"
+                    to={"/"}>
+                    <button className="home-btn">HOME</button>
+                </Link>
                 <h1 className="site-title">QuickShot</h1>
                 <h2 className="description">Surveys in no time</h2>
                 {(survey !== null) && (

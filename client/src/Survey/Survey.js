@@ -6,11 +6,12 @@ import List from './List';
 import './Survey.css';
 import ReCAPTCHA from 'react-google-recaptcha';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Survey() {
 
-    const [survey, setSurvey] = useState([])
+    const [survey, setSurvey] = useState(null)
     const [answers, setAnswers] = useState([])
     const [questions, setQuestions] = useState([])
     const [showModal, setShowModal] = useState(false)
@@ -27,13 +28,14 @@ export default function Survey() {
     const getSurvey = useCallback(
         () => {
             axios
-                .get("https://" + window.location.host + "/survey/" + id)
+                .get(window.location.host + "/survey/" + id)
                 .then((res) => {
                     setSurvey(res.data)
                     setShowQuestions(true)
                 })
                 .catch(() => {
                     console.log("error")
+                    setShowQuestions(false)
                 })
         },
         [id],
@@ -46,7 +48,7 @@ export default function Survey() {
     const postAnswers = () => {
         axios
             .post(
-                "https://" + window.location.host + "/answers/add",
+                window.location.host + "/answers/add",
                 { answerSet: answers, surveyId: id }
             )
             .then((res) => {
@@ -134,7 +136,7 @@ export default function Survey() {
 
     const captchaOnChange = (response) => {
         axios
-            .post("https://" + window.location.host + "/verify-captcha", [response])
+            .post(window.location.host + "/verify-captcha", [response])
             .then((res) => {
                 setCaptchaValid(res.data)
             })
@@ -149,10 +151,13 @@ export default function Survey() {
         setShowModal(false)
     }
 
-    console.log(showModal)
     return (
         <div className="survey-view">
             <div className="top-part">
+                <Link className="home-link"
+                    to={"/"}>
+                    <button className="home-btn">HOME</button>
+                </Link>
                 <h1 className="site-title">QuickShot</h1>
                 <h2 className="description">Surveys in no time</h2>
                 {survey !== null && (

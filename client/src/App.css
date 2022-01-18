@@ -150,23 +150,36 @@ a {
 }
 
 .results-link {
-  width:fit-content;
+  width: fit-content;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .captcha {
-  width:fit-content;
+  width: fit-content;
   margin: 15px auto 15px auto;
 }
 
 .load-btn {
   background-color: steelblue;
 }
- #survey-code {
-   width: 60%;
- }
 
- #load-survey-btn {
+#survey-code {
+  width: 60%;
+}
+
+#load-survey-btn {
   margin-right: 20px;
- }
+}
+
+.home-btn {
+  position: fixed;
+  left: 0;
+  top: 5%;
+  padding: 0;
+  width: 25px;
+  height: 80px;
+  margin: 0;
+  writing-mode: vertical-rl;
+}

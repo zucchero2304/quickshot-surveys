@@ -44,7 +44,7 @@ function App() {
     axios
       .post("https://" + window.location.host + "/survey/add", survey)
       .then((res) => {
-        console.log("Survey posted! Its id is:" + res.data)
+        console.log("Survey posted!")
         setSurveyId(res.data)
       })
       .catch(() => {

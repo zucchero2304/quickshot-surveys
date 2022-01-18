@@ -6,7 +6,7 @@ export default function Image({ surveyId, answer, answersCount, totalVotes, labe
     const [source, setSource] = useState(null)
 
     axios
-        .get("https://" + window.location.host + "/images/" + surveyId + ":" + answer)
+        .get(window.location.host + "/images/" + surveyId + ":" + answer)
         .then((res) => {
             setSource(res.data)
         })
