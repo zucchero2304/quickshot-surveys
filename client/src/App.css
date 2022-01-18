@@ -178,8 +178,9 @@ a {
   left: 0;
   top: 5%;
   padding: 0;
-  width: 25px;
-  height: 80px;
+  width: 80px;
+  height: 25px;
   margin: 0;
-  writing-mode: tb-rl;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
