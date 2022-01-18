@@ -117,7 +117,7 @@ export default function CloseQuestionResult({ question, answers, id }) {
                             responsive: true,
                             layout: {
                                 padding: {
-                                    bottom: 7
+                                    bottom: 12
                                 }
                             }
                         }}
