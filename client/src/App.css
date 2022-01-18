@@ -182,4 +182,7 @@ a {
   height: 80px;
   margin: 0;
   writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
 }
