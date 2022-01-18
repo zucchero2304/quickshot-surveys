@@ -39,7 +39,7 @@ export default function Results() {
     const fetchAnswers = useCallback(
         () => {
             axios
-                .get(window.location.host + "/answers/" + id)
+                .get("https://" + window.location.host + "/answers/" + id)
                 .then((res) => {
                     let answerDocuments = res.data
                     makeAnswersArray(answerDocuments)
@@ -60,7 +60,7 @@ export default function Results() {
         if (id !== null) {
             setFetchData(false)
             axios
-                .get(window.location.host + "/survey/" + id)
+                .get("https://" + window.location.host + "/survey/" + id)
                 .then((res) => {
                     setSurvey(res.data)
                 })
@@ -129,7 +129,7 @@ export default function Results() {
     const deleteSurvey = () => {
         //delete survey
         axios
-            .delete(window.location.host + '/survey/delete/' + id)
+            .delete('https://' + window.location.host + '/survey/delete/' + id)
             .then((res) => {
                 console.log(res)
             })
@@ -139,7 +139,7 @@ export default function Results() {
 
         //delete all answers for this survey
         axios
-            .delete(window.location.host + '/answers/delete/' + id)
+            .delete('https://' + window.location.host + '/answers/delete/' + id)
             .then((res) => {
                 console.log(res)
             })
@@ -151,7 +151,7 @@ export default function Results() {
         //won't fire if there weren't any images
         if (imageIds.length >= 2) {
             axios
-                .delete(window.location.host + '/images/delete/' + id, { data: imageIds })
+                .delete('https://' + window.location.host + '/images/delete/' + id, { data: imageIds })
                 .then((res) => {
                     console.log(res)
                 })
