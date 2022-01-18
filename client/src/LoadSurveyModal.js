@@ -15,7 +15,7 @@ export default function LoadSurveyModal({ setShowLoadSurveyModal }) {
     const recaptchaRef = useRef(null)
     const captchaOnChange = (response) => {
         axios
-            .post(window.location.host + "/verify-captcha", [response])
+            .post("https://" + window.location.host + "/verify-captcha", [response])
             .then((res) => {
                 setCaptchaValid(res.data)
             })
