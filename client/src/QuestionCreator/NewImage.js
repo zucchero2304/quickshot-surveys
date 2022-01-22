@@ -32,10 +32,7 @@ export default function NewImage({ setAnswers, photoMap, setPhotoMap, title }) {
         photos.forEach((photo) => {
             let id = Math.floor(Math.random() * 100000)
             map.set(id, photo)
-            //set (key, value)
             ansIds.push(id)
-            //how to store photos and their names to save them in App.js and then be able to access? continue here<<<<<<<<<<<<<<<<
-            // Maybe key-value pairs, in Map? 
         })
         setPhotoMap(map)
         setAnswers(ansIds)

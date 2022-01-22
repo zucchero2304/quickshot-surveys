@@ -1,7 +1,7 @@
-const express = require("express");
-const router = express.Router();
+const express = require("express")
+const router = express.Router()
 
-const AWS = require('aws-sdk');
+const AWS = require('aws-sdk')
 
 const s3 = new AWS.S3({
     accessKeyId: process.env.S3_ID,
@@ -29,22 +29,19 @@ router.route("/images/add").post(function (req, res) {
 })
 
 const uploadFile = (file, name) => {
-    // Read content from the file
-    // const fileContent = fs.readFileSync(fileName);
-
-    // Setting up S3 upload parameters
+    // S3 upload parameters
     const params = {
         Bucket: process.env.S3_BUCKET_NAME,
-        Key: name, // File name you want to save as in S3
+        Key: name, // filename in S3
         Body: file
     };
 
     // Uploading files to the bucket
     s3.upload(params, function (err, data) {
         if (err) {
-            throw err;
+            throw err
         }
-        console.log(`File uploaded successfully. ${data.Location}`);
+        console.log(`File uploaded successfully. ${data.Location}`)
     });
 };
 
