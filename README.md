@@ -9,16 +9,16 @@ How to run:
 
 Node and NPM have to be installed. 
 
-Inside root folder: 
-npm install to install dependencies listed in package.json
-Create config folder with config.env file containing appropriate environmental variables. 
+Inside root folder:   
+npm install to install dependencies listed in package.json  
+Create config folder with config.env file containing appropriate environmental variables.   
 nodemon server to start the server
 
-Inside client folder: 
-npm install to install dependencies listed in package.json
+Inside client folder:   
+npm install to install dependencies listed in package.json  
 npm start
 
-The app should launch under localhost:3000
+The app should launch umnder localhost:3000
 
 
 
