@@ -11,7 +11,7 @@ const s3 = new AWS.S3({
 router.route("/images/:id").get(function (req, res) {
     const params = {
         Bucket: process.env.S3_BUCKET_NAME,
-        Key: req.params.id
+        Key: req.params.id  
     }
 
     s3.getObject(params, (err, data) => {
@@ -34,7 +34,7 @@ const uploadFile = (file, name) => {
         Bucket: process.env.S3_BUCKET_NAME,
         Key: name, // filename in S3
         Body: file
-    };
+    }
 
     // Uploading files to the bucket
     s3.upload(params, function (err, data) {
@@ -42,8 +42,8 @@ const uploadFile = (file, name) => {
             throw err
         }
         console.log(`File uploaded successfully. ${data.Location}`)
-    });
-};
+    })
+}
 
 router.route("/images/delete/:id").delete(function (req, res) {
     let objects = []

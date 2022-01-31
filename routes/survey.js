@@ -1,8 +1,6 @@
 const express = require("express")
 
 // recordRoutes is an instance of the express router.
-// We use it to define our routes.
-// The router will be added as a middleware and will take control of requests starting with path /record.
 const recordRoutes = express.Router()
 
 const dbo = require("../db/connection")
@@ -10,7 +8,7 @@ const dbo = require("../db/connection")
 const ObjectId = require("mongodb").ObjectId
 
 recordRoutes.route("/survey/:id").get(function (req, res) {
-    let db_connect = dbo.getDb();
+    let db_connect = dbo.getDb()
     let surveyId = new ObjectId(req.params.id)
     let myquery = { _id: surveyId }
     db_connect
@@ -19,7 +17,7 @@ recordRoutes.route("/survey/:id").get(function (req, res) {
             if (err) throw err
             res.json(result)
         })
-});
+})
 
 recordRoutes.route("/survey/add").post(function (req, response) {
     let db_connect = dbo.getDb()
@@ -29,13 +27,13 @@ recordRoutes.route("/survey/add").post(function (req, response) {
         title: req.body.title,
         description: req.body.description,
         questions: req.body.questions
-    };
+    }
     db_connect.collection("surveys").insertOne(myobj, function (err, res) {
         if (err) throw err
         let theId = myobj._id
         response.send(theId)
-    });
-});
+    })
+})
 
 recordRoutes.route("/survey/delete/:id").delete(function (req, response) {
     let db_connect = dbo.getDb()
